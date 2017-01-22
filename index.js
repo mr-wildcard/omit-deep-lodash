@@ -17,7 +17,7 @@ module.exports = function omitDeepLodash(input, props) {
       o[key] = omitDeepLodash(value, props);
     });
 
-    return _.omit(o, props);
+    return _.omitBy(o, props);
   }
 
   if (typeof input === "undefined") {
